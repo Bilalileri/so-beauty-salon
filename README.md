@@ -14,7 +14,7 @@ Conversion-focused landing page for S&O Beauty Salon in the Mannheim Quadrate. T
 - `BeautySalon` and FAQ structured data
 - canonical metadata, sitemap, robots, manifest, and favicon
 - no analytics, third-party embeds, or marketing cookies in version one
-- preview deployments are automatically marked `noindex`
+- indexing is locked until `NEXT_PUBLIC_ALLOW_INDEXING=true` is explicitly set for the final launch
 
 ## Local development
 
@@ -40,6 +40,7 @@ Copy `.env.example` to `.env.local` when a non-default canonical domain is neede
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://beautyso.de
+NEXT_PUBLIC_ALLOW_INDEXING=false
 ```
 
 ## Media sources
@@ -55,6 +56,7 @@ NEXT_PUBLIC_SITE_URL=https://beautyso.de
 - confirm the right to reuse all imagery contained in the supplied flyer
 - add the final price list
 - connect `beautyso.de` to Vercel and verify HTTPS, redirects, canonical URLs, Search Console, and sitemap submission
+- set `NEXT_PUBLIC_ALLOW_INDEXING=true` only after the production launch checklist is complete
 - keep the Google Business Profile as a distinct S&O listing with its own signage, phone, and precise suite/floor details because another business operates at the same street address
 
 The wider local SEO rollout is documented in [docs/SEO-LAUNCH-PLAN.md](docs/SEO-LAUNCH-PLAN.md).

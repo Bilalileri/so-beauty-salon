@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://beautyso.de";
-const isPreviewDeployment = process.env.VERCEL_ENV === "preview";
+const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
       "Laser-Haarentfernung, AquaFacial, Microneedling, Wimpernlifting und Hautpflege in Mannheim.",
   },
   robots: {
-    index: !isPreviewDeployment,
-    follow: !isPreviewDeployment,
+    index: allowIndexing,
+    follow: allowIndexing,
   },
 };
 
