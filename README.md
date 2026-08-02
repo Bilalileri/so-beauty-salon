@@ -6,7 +6,7 @@ Conversion-focused landing page for S&O Beauty Salon in the Mannheim Quadrate. T
 
 - responsive Next.js 16 landing page
 - locally hosted stock hero video and poster
-- supplied S&O logo and Soprano flyer artwork
+- supplied S&O logo and Soprano ICE Platinum machine artwork
 - treatment overview for laser hair removal, AquaFacial, microneedling, lash lifting, and skincare
 - WhatsApp CTAs using `+49 15565 855752`
 - verified opening hours: Monday-Friday, 10:00-18:00
@@ -46,14 +46,15 @@ NEXT_PUBLIC_ALLOW_INDEXING=false
 ## Media sources
 
 - Logo: supplied by the client as `SO LOGO.svg`.
-- Soprano artwork: rendered from the client-supplied `SO flyer.pdf`.
+- Soprano ICE Platinum machine PNG: supplied by the client as `Alma-Prime_hr-1-3.png`.
+- Technology wording: based on [Alma Lasers' official Soprano ICE Platinum information](https://www.alma-soprano.com/soprano-ice-platinum/); the personal sensation disclaimer remains visible.
 - Hero video: [Mixkit clip 52148](https://mixkit.co/free-stock-video/a-young-beautiful-woman-laying-on-the-spa-bed-receives-52148/), used under the Mixkit Stock Video Free License.
 
 ## Required before the production-domain launch
 
 - replace the legal-page placeholders with the salon owner's complete legal details and review the texts professionally
 - verify the exact NiSV documentation and the right to publish the NiSV claim
-- confirm the right to reuse all imagery contained in the supplied flyer
+- confirm the right to publish the supplied Soprano ICE Platinum product image
 - add the final price list
 - connect `beautyso.de` to Vercel and verify HTTPS, redirects, canonical URLs, Search Console, and sitemap submission
 - set `NEXT_PUBLIC_ALLOW_INDEXING=true` only after the production launch checklist is complete

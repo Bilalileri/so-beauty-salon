@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-      images: [`${siteUrl}/media/soprano-flyer.png`],
+      images: [`${siteUrl}/media/soprano-ice-platinum.png`],
     },
     {
       url: `${siteUrl}/impressum`,

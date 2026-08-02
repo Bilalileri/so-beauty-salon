@@ -492,17 +492,66 @@ p {
 
 .technology-visual {
   position: relative;
+  isolation: isolate;
+  display: flex;
   min-height: 720px;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
   border-radius: 260px 260px 26px 26px;
-  background: var(--sage);
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.72), transparent 38%),
+    linear-gradient(150deg, #daddcf 0%, var(--sage) 55%, #aeb2a0 100%);
   box-shadow: 0 32px 80px rgba(73, 66, 56, 0.13);
 }
 
+.technology-visual::after {
+  position: absolute;
+  right: 10%;
+  bottom: 22px;
+  left: 10%;
+  z-index: -1;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(49, 49, 44, 0.22);
+  filter: blur(17px);
+  content: "";
+}
+
 .technology-image {
-  object-fit: cover;
-  object-position: 73% 44%;
-  transform: scale(1.12);
+  position: relative;
+  z-index: 1;
+  width: auto;
+  height: min(89%, 650px);
+  object-fit: contain;
+  filter: drop-shadow(0 28px 28px rgba(35, 34, 31, 0.24));
+}
+
+.machine-label {
+  position: absolute;
+  top: 44px;
+  left: 50%;
+  z-index: 3;
+  display: grid;
+  width: max-content;
+  gap: 5px;
+  color: rgba(43, 41, 38, 0.66);
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.machine-label span {
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+}
+
+.machine-label strong {
+  font-family: var(--font-cormorant), serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .nisv-badge {
@@ -555,30 +604,69 @@ p {
   margin-top: 28px;
 }
 
-.technology-copy ul {
+.technology-highlights {
   display: grid;
-  gap: 17px;
+  grid-template-columns: repeat(3, 1fr);
   margin: 34px 0;
-  padding: 28px 0;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  list-style: none;
+  border-left: 1px solid var(--line);
 }
 
-.technology-copy li {
+.technology-highlights article {
   display: flex;
-  align-items: center;
-  gap: 13px;
-  color: #554f49;
-  font-size: 13px;
-  line-height: 1.5;
+  min-height: 138px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 17px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.technology-copy li svg {
-  width: 19px;
+.technology-highlights strong {
+  color: var(--rose-deep);
+  font-family: var(--font-cormorant), serif;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.technology-highlights span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.technology-care {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.technology-care svg {
+  width: 20px;
   flex: 0 0 auto;
   color: var(--rose-deep);
   stroke-width: 1.5;
+}
+
+.technology-care p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.technology-care strong {
+  color: var(--ink);
+}
+
+.technology-footnote {
+  display: block;
+  margin: 0 0 28px 33px;
+  color: #8b847c;
+  font-size: 9px;
+  line-height: 1.55;
 }
 
 .experience {
@@ -1038,7 +1126,19 @@ p {
   }
 
   .technology-image {
-    object-position: 71% 42%;
+    height: min(87%, 560px);
+  }
+
+  .machine-label {
+    top: 30px;
+  }
+
+  .technology-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-highlights article {
+    min-height: 100px;
   }
 
   .nisv-badge {

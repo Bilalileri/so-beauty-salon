@@ -95,7 +95,7 @@ function StructuredData() {
         url: "https://beautyso.de",
         telephone: "+49 15565 855752",
         email: "info@beautyso.de",
-        image: "https://beautyso.de/media/soprano-flyer.png",
+        image: "https://beautyso.de/media/soprano-ice-platinum.png",
         description:
           "Kosmetikstudio in Mannheim für Laser-Haarentfernung, AquaFacial, Microneedling, Wimpernlifting und professionelle Hautpflege.",
         address: {
@@ -289,10 +289,15 @@ export default function Home() {
 
         <section className="technology section-pad shell" id="technologie">
           <div className="technology-visual">
+            <div className="machine-label" aria-hidden="true">
+              <span>Alma Lasers</span>
+              <strong>Soprano ICE Platinum</strong>
+            </div>
             <Image
-              src="/media/soprano-flyer.png"
-              alt="Soprano ICE Platinum Lasergerät aus dem S&O Beauty Salon Flyer"
-              fill
+              src="/media/soprano-ice-platinum.png"
+              alt="Soprano ICE Platinum Lasergerät von Alma Lasers"
+              width={676}
+              height={1017}
               sizes="(max-width: 900px) 100vw, 52vw"
               className="technology-image"
             />
@@ -305,17 +310,35 @@ export default function Home() {
 
           <div className="technology-copy">
             <p className="eyebrow">Soprano ICE Platinum</p>
-            <h2>Moderne Technologie. Persönlich angewendet.</h2>
+            <h2>Premium-Technologie für spürbar mehr Komfort.</h2>
             <p>
-              Für die Laser-Haarentfernung arbeitet S&O mit Soprano ICE Platinum.
-              Die Anwendung wird auf Hauttyp, Haarstruktur und Behandlungsbereich abgestimmt
-              und komfortorientiert geplant.
+              Soprano ICE Platinum kombiniert drei Laserwellenlängen in einem Applikator.
+              So können unterschiedliche Tiefen des Haarfollikels gezielt angesprochen werden.
+              Die SHR™ In-Motion-Technik erwärmt die Haut schrittweise, während ICE™ die
+              Hautoberfläche kontinuierlich kühlt - für eine gleichmäßige und nahezu
+              schmerzfreie Anwendung.*
             </p>
-            <ul>
-              <li><ShieldCheck aria-hidden="true" /> Behandlung durch fachkundig geschultes Personal</li>
-              <li><Sparkles aria-hidden="true" /> Individuell abgestimmte Einstellungen</li>
-              <li><Flower2 aria-hidden="true" /> Ruhige Begleitung vom Erstgespräch bis zum Folgetermin</li>
-            </ul>
+            <div className="technology-highlights" aria-label="Vorteile der Soprano ICE Platinum Technologie">
+              <article>
+                <strong>3-in-1</strong>
+                <span>755, 810 und 1064 nm in einem Applikator</span>
+              </article>
+              <article>
+                <strong>ICE™</strong>
+                <span>Kontinuierliche Kühlung für mehr Hautkomfort</span>
+              </article>
+              <article>
+                <strong>SHR™</strong>
+                <span>Sanfte, schrittweise Wärme mit In-Motion-Technik</span>
+              </article>
+            </div>
+            <div className="technology-care">
+              <ShieldCheck aria-hidden="true" />
+              <p><strong>Fachkundig und individuell:</strong> Einstellungen und Ablauf werden auf Hauttyp, Haarstruktur und Behandlungsbereich abgestimmt.</p>
+            </div>
+            <small className="technology-footnote">
+              *„Virtually painless“ laut Hersteller Alma Lasers. Das persönliche Empfinden kann variieren.
+            </small>
             <a className="button button-dark" href={whatsappUrl} target="_blank" rel="noreferrer">
               Beratung anfragen <ArrowUpRight aria-hidden="true" />
             </a>
