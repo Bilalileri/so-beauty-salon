@@ -4,57 +4,15 @@ import {
   ArrowDown,
   ArrowUpRight,
   Clock3,
-  Droplets,
-  Flower2,
   MapPin,
   MessageCircle,
-  ScanFace,
   ShieldCheck,
-  Sparkles,
-  WandSparkles,
 } from "lucide-react";
+import { CustomerJourneyTimeline } from "./components/CustomerJourneyTimeline";
+import { laserPackages, mapsUrl, treatments, whatsappUrl } from "./treatments";
 
-const whatsappUrl =
-  "https://wa.me/4915565855752?text=Hallo%20S%26O%20Beauty%20Salon%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20anfragen.";
-const mapsUrl = "https://maps.app.goo.gl/1dS2JhXRv3E81keT9";
-
-const treatments = [
-  {
-    name: "Laser-Haarentfernung",
-    number: "01",
-    description:
-      "Individuell auf Haut und Haar abgestimmte Behandlungen mit moderner Soprano-Technologie.",
-    icon: Sparkles,
-  },
-  {
-    name: "AquaFacial",
-    number: "02",
-    description:
-      "Intensive Reinigung, Pflege und Feuchtigkeit für ein frisches, gepflegtes Hautgefühl.",
-    icon: Droplets,
-  },
-  {
-    name: "Microneedling",
-    number: "03",
-    description:
-      "Eine gezielte Anwendung zur Unterstützung eines ebenmäßiger wirkenden Hautbildes.",
-    icon: ScanFace,
-  },
-  {
-    name: "Wimpernlifting",
-    number: "04",
-    description:
-      "Natürlich geschwungene, ausdrucksstarke Wimpern - gepflegt und alltagstauglich.",
-    icon: WandSparkles,
-  },
-  {
-    name: "Professionelle Hautpflege",
-    number: "05",
-    description:
-      "Ruhige, persönliche Pflege, abgestimmt auf Ihren Hauttyp und Ihre individuellen Ziele.",
-    icon: Flower2,
-  },
-];
+const mapEmbedUrl =
+  "https://www.google.com/maps?q=Q1%2C%207%2C%2068161%20Mannheim&output=embed";
 
 const faqs = [
   {
@@ -75,7 +33,7 @@ const faqs = [
   {
     question: "Was kostet eine Behandlung?",
     answer:
-      "Die Preisliste wird aktuell ergänzt. Bis dahin nennen wir Ihnen den passenden Preis direkt und transparent bei Ihrer WhatsApp-Anfrage.",
+      "Wimpernlifting kostet 49 € inkl. Färben, AquaFacial 89 € und Microneedling 99 €. Laser-Haarentfernung startet ab 24 € pro Einzelzone; Pakete starten ab 119 €.",
   },
   {
     question: "Gibt es vor der Laserbehandlung eine Beratung?",
@@ -111,6 +69,8 @@ function StructuredData() {
           longitude: 8.4674839,
         },
         areaServed: ["Mannheim", "Ludwigshafen am Rhein", "Rhein-Neckar"],
+        hasMap: mapsUrl,
+        priceRange: "€€",
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
@@ -187,6 +147,7 @@ export default function Home() {
         </Link>
         <nav aria-label="Hauptnavigation">
           <a href="#behandlungen">Behandlungen</a>
+          <a href="#preise">Preise</a>
           <a href="#technologie">Technologie</a>
           <a href="#studio">Studio</a>
           <a href="#fragen">Fragen</a>
@@ -267,32 +228,86 @@ export default function Home() {
             </div>
 
             <div className="treatment-grid">
-              {treatments.map((treatment) => {
-                const Icon = treatment.icon;
-                return (
-                  <article className="treatment-card" key={treatment.name}>
-                    <div className="treatment-topline">
-                      <span>{treatment.number}</span>
-                      <Icon aria-hidden="true" />
-                    </div>
+              {treatments.map((treatment) => (
+                <article className="treatment-card" key={treatment.name}>
+                  <Link className="treatment-media" href={treatment.href} aria-label={`${treatment.name} ansehen`}>
+                    <video
+                      src={treatment.video.src}
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  <div className="treatment-body">
                     <h3>{treatment.name}</h3>
-                    <p>{treatment.description}</p>
-                    <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`${treatment.name} per WhatsApp anfragen`}>
-                      Anfragen <ArrowUpRight aria-hidden="true" />
-                    </a>
-                  </article>
-                );
-              })}
+                    <p>{treatment.shortDescription}</p>
+                    <Link href={treatment.href} aria-label={`${treatment.name} ansehen`}>
+                      Mehr erfahren <ArrowUpRight aria-hidden="true" />
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
+          </div>
+        </section>
+
+        <section className="pricing section-pad shell" id="preise">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Preise</p>
+              <h2>Klar geplant. Schön zurückhaltend.</h2>
+            </div>
+            <p>
+              Die wichtigsten Preise auf einen Blick. Bei Laser-Haarentfernung
+              stimmen wir Zonen und Pakete persönlich auf Ihre Wünsche ab.
+            </p>
+          </div>
+
+          <div className="pricing-layout">
+            <div className="price-menu">
+              <div className="price-menu-heading">
+                <span>Behandlung</span>
+                <span>Preis</span>
+              </div>
+              {treatments.map((treatment) => (
+                <Link className="price-row" href={treatment.href} key={treatment.name}>
+                  <div>
+                    <span>{treatment.name}</span>
+                    <small>{treatment.price.detail}</small>
+                  </div>
+                  <i aria-hidden="true" />
+                  <strong>{treatment.price.label}</strong>
+                </Link>
+              ))}
+            </div>
+
+            <aside className="laser-package-panel" aria-label="Laser-Paketpreise">
+              <p className="eyebrow">Laser-Pakete</p>
+              <h3>Mehrere Zonen werden günstiger.</h3>
+              <p>
+                Besonders sinnvoll, wenn mehrere Bereiche in einem Termin geplant werden.
+                Die genaue Auswahl stimmen wir persönlich per WhatsApp ab.
+              </p>
+              <div>
+                {laserPackages.slice(0, 3).map((item) => (
+                  <Link className={item.featured ? "package-row featured" : "package-row"} href="/behandlungen/laser-haarentfernung" key={item.name}>
+                    <div>
+                      <span>{item.name}</span>
+                      <small>{item.detail}</small>
+                    </div>
+                    <i aria-hidden="true" />
+                    <strong>{item.price}</strong>
+                  </Link>
+                ))}
+              </div>
+            </aside>
           </div>
         </section>
 
         <section className="technology section-pad shell" id="technologie">
           <div className="technology-visual">
-            <div className="machine-label" aria-hidden="true">
-              <span>Alma Lasers</span>
-              <strong>Soprano ICE Platinum</strong>
-            </div>
             <Image
               src="/media/soprano-ice-platinum.png"
               alt="Soprano ICE Platinum Lasergerät von Alma Lasers"
@@ -349,25 +364,13 @@ export default function Home() {
           <div className="shell">
             <div className="experience-heading">
               <p className="eyebrow light">Ihr Termin bei S&O</p>
-              <h2>Einfach anfragen. In Ruhe ankommen.</h2>
+              <h2>In drei Schritten zu Ihrem Beauty-Termin.</h2>
+              <p>
+                Schnell, persönlich und ohne komplizierte Buchungsmaske:
+                Wir planen Ihren Termin direkt per WhatsApp.
+              </p>
             </div>
-            <div className="steps">
-              <article>
-                <span>01</span>
-                <h3>WhatsApp senden</h3>
-                <p>Wunschbehandlung und mögliche Termine kurz mitteilen.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <h3>Persönlich abstimmen</h3>
-                <p>Wir klären Ihre Fragen und bestätigen den passenden Termin.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <h3>Zeit für Sie</h3>
-                <p>Entspannt im Studio ankommen und individuell beraten lassen.</p>
-              </article>
-            </div>
+            <CustomerJourneyTimeline whatsappUrl={whatsappUrl} />
           </div>
         </section>
 
@@ -401,6 +404,22 @@ export default function Home() {
               </a>
             </div>
             <div className="contact-card">
+              <div className="map-panel">
+                <div className="map-marker-card">
+                  <MapPin aria-hidden="true" />
+                  <span>S&O Beauty Salon</span>
+                  <strong>Q1, 7 · Mannheim</strong>
+                </div>
+                <iframe
+                  src={mapEmbedUrl}
+                  title="S&O Beauty Salon Standort in Mannheim Q1"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <a href={mapsUrl} target="_blank" rel="noreferrer">
+                  Route öffnen <ArrowUpRight aria-hidden="true" />
+                </a>
+              </div>
               <div>
                 <MapPin aria-hidden="true" />
                 <span>Adresse</span>
