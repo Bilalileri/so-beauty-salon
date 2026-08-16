@@ -1,120 +1,199 @@
-# S&O Brand Kit and Landing Page Concept
+# S&O Beauty Salon: Rosé Modernism Landing Design
 
 ## Status
 
-Design direction approved in conversation. Mockup-first; production website code remains unchanged until the visual concept is reviewed.
+Approved visual direction. The responsive mockup is available at `docs/brand-kit-v2/landing.html`; the associated system board is at `docs/brand-kit-v2/brand-kit.html`. Production pages remain unchanged until the implementation plan is approved.
 
-## Product truth carried forward
+## Scope
 
-S&O is a local beauty salon in Mannheim Q1 offering laser hair removal and skin-focused treatments. The website should build enough confidence for a visitor to start a personal WhatsApp conversation. Public treatment prices are removed. Trust must come from real treatment footage, Soprano ICE Platinum, NiSV qualification, location, process clarity, and—when supplied—the owner and studio.
+This specification covers the landing page and the shared visual and responsive rules that later service-page redesigns must inherit. It does not approve a new composition for each service page; those pages require their own review after the landing foundation is implemented.
 
-## Direction: Personal confidence with editorial restraint
+## Goal
 
-“Editorial restraint” means the page feels premium through proportion, typography, image choice, and whitespace. It does not imitate luxury with gradients, floating capsules, ornamental badges, repeated cards, or large amounts of decorative copy. The visitor should remember a calm local specialist and real treatment evidence, not a UI style.
+Present S&O as a personal, qualified beauty salon in Mannheim Q1 and make starting a WhatsApp conversation easy. The page must explain the salon quickly, remain calm and readable on a phone, and use video without becoming a reel feed.
 
-### Design contract
+## Product truth
 
-- **THESIS:** S&O makes considered beauty treatment feel personal and understandable. Refuse the generic spa landing page made of repeated rounded feature cards.
-- **OWN-WORLD:** Warm ivory paper, deep espresso type, one muted terracotta accent, quiet hairline rules, large real photography, editorial asymmetry, and compact action controls.
-- **STORY:** Understand the salon, browse treatments, see real proof and technology, learn the simple visit process, then ask for a personal recommendation on WhatsApp.
-- **FIRST VIEWPORT:** A slim cream header; an asymmetrical 55/45 hero with a large local promise and restrained action on the left, cinematic treatment imagery on the right; address and hours sit as useful facts, not badges.
-- **FORM:** Owner-led treatment journal. It uses an editorial index, contact-sheet imagery, proof captions, and measured sequences rather than a catalogue grid.
-- **FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+- Location: Q1, 7, 68161 Mannheim.
+- Opening hours: Monday to Friday, 10:00–18:00.
+- Booking: personal conversation through WhatsApp.
+- Treatments: laser hair removal, AquaFacial, microneedling, eyelash lifting and professional skincare.
+- Technology: Soprano ICE Platinum.
+- Qualification: NiSV expertise; final public wording must match the client's actual qualification evidence.
 
-## Brand system
+## Explicit exclusions
 
-### Brand idea
+- No public treatment prices.
+- No owner portrait, biography or placeholder until the client supplies approved material.
+- No testimonials without a verifiable source and publication permission.
+- No invented transformation claims, guaranteed results or unsupported “painless” promises.
+- No floating circular NiSV badge, decorative capsules or green full-width WhatsApp bar.
+- No simultaneous autoplay of several treatment videos.
 
-**Ruhe, die Vertrauen schafft. Präzision, die man versteht.**
+## Direction: Rosé Modernism
 
-S&O should sound warm, direct, and qualified. Short sentences. Specific facts. No exaggerated transformation language.
+The identity combines warm beauty colors with a restrained modernist grid. It avoids the usual luxury-template formula of oversized serif headlines, repeated rounded cards and decorative gradients.
 
-### Color
+### Color tokens
 
-- Porcelain `#F7F3ED`: primary page surface.
-- Paper `#ECE3D9`: quiet secondary surface.
-- Espresso `#241F1C`: primary text and strongest actions.
-- S&O Clay `#9B625B`: restrained brand accent and focus state.
-- Dusty Rose `#D8BBB4`: supporting tint drawn from the existing identity.
-- Sage Grey `#9A9B90`: rare technology/supporting neutral.
+- Bone `#F5F0EA`: neutral page background.
+- Paper `#FFFDFA`: light content surface.
+- Blush `#E3C4C0`: primary warm brand field.
+- Rose `#C98F91`: supporting accent.
+- Wine `#713746`: location and emphasis sections.
+- Wine Dark `#4B222E`: header, film section and mobile booking action.
+- Ink `#21191C`: primary text and dark buttons.
 
-White and black remain functional colors. No gradients. Accent color should stay below roughly fifteen percent of any viewport.
+No gradients are part of the brand system. Video overlays may use a restrained dark transparency only when captions require contrast.
 
 ### Typography
 
-- **Newsreader:** display voice for important headings and editorial quotations. Use optical size and deliberate line breaks; never let long German words overflow.
-- **Karla:** body, navigation, labels, and controls. Its warm humanist shapes feel more personal and less generic than the current Instrument Sans while staying highly readable.
-- Display headings should normally stay below `clamp(3.2rem, 7vw, 6rem)` and use a maximum width based on the actual German copy.
+Use a neutral grotesk system stack: `Helvetica Neue`, `Helvetica`, `Arial`, sans-serif. Character comes from proportion, whitespace and weight rather than a fashionable display font.
+
+- Body copy: at least 16px on mobile with a line-height near 1.6.
+- Navigation and labels: 11–13px, uppercase only for short factual labels.
+- Landing H1: responsive, approximately 48–60px on mobile and 58–94px on larger screens; line-height must stay near 0.96–1.0.
+- Paragraph line length: normally no more than 60–65 characters.
+- German words must never overflow or rely on awkward manual breaks.
 
 ### Logo
 
-Keep the interlocking S&O symbol and wordmark relationship. The current repository SVG embeds a raster image, so a true vector redraw is required before the identity is considered production-ready. Until then, use the current file at conservative sizes and never enlarge it as a hero graphic.
+Use the supplied transparent 2000×2000 PNG. The source contains generous transparent space, so the interface may display it through a clipped logo window. Keep the source file unchanged. The production implementation must provide explicit dimensions, preserve aspect ratio and avoid browser upscaling that causes mobile blur.
 
-### Components
+## Landing-page composition
 
-- Buttons: compact rectangles with a 4–8px radius, strong text, and no capsule shape.
-- Links: plain editorial text links with a small authored arrow.
-- Rules: 1px hairlines for rhythm and grouping.
-- Treatments: an editorial image index, not five identical cards.
-- NiSV: written proof lockup beside the technology copy, not a floating circular badge.
-- WhatsApp: one primary action per section; no bright green full-width floating bar.
+### 1. Header
 
-### Photography and video
+- Wine Dark background with the light S&O symbol and a simple text lockup.
+- Desktop navigation: treatments, technology, process and contact.
+- One outlined “Termin anfragen” action.
+- Mobile: logo and compact menu control; no full desktop navigation squeezed into the header.
 
-- Lead with quiet, close treatment detail and hands at work.
-- Use the client-supplied laser-leg footage as “real treatment” proof in the page body.
-- Avoid AI-generated people, generic flower/spa still lifes, and over-retouched skin.
-- Future owner portrait: natural window light, half-body or environmental portrait in the studio, calm expression, direct but not corporate.
-- Future studio set: entrance/location, treatment room, consultation moment, machine in context, hygiene/detail shot, owner portrait.
+### 2. Hero
 
-### Motion
+The approved hero is contained rather than a perfect 50/50 full-screen split.
 
-One authored moment: the treatment index changes its large media panel as the visitor moves through services. On mobile this becomes a native horizontal snap gallery. The visit process may use a single progress line and dot linked to scroll, with reduced-motion fallback. Other sections remain still.
+- Background: Blush.
+- Desktop: copy occupies the wider column; a contained 4:5 treatment film sits in the narrower column with generous space around it.
+- Mobile: copy comes first, followed by the 4:5 film.
+- Eyebrow: `S&O Beauty Salon · Mannheim Q1`.
+- H1: `Laser & Hautpflege in Mannheim.`
+- Supporting copy: `Wir nehmen uns Zeit für eine persönliche Beratung und wählen gemeinsam die Behandlung, die zu Ihnen passt.`
+- Primary action: `Termin über WhatsApp`.
+- Secondary action: `Behandlungen ansehen`.
+- Address and opening hours appear as two compact factual blocks below the actions.
+- The persistent mobile booking action is hidden in the first viewport and appears only after the visitor passes the hero.
 
-## Landing-page structure
+### 3. Personal introduction
 
-1. Header and asymmetrical hero with local category, promise, WhatsApp action, address, and hours.
-2. Owner-led introduction with a reserved portrait position until client imagery arrives.
-3. Editorial treatment index with real media and direct links to service pages.
-4. Real laser-treatment proof using the client video and a concise explanation of what the visitor is seeing.
-5. Personal recommendation section replacing all public pricing: visitor goals, suitability, and WhatsApp consultation.
-6. Soprano ICE Platinum and NiSV proof, with honest comfort wording and the machine shown at useful scale.
-7. Three-step visit journey: ask, personal check, treatment and aftercare.
-8. Short FAQ focused on booking, suitability, preparation, and expectations.
-9. Owner/studio trust section, Google map/location details, opening hours, and final WhatsApp action.
-10. Legal footer and contact details.
+Use text only. The message is that a visit begins with listening and personal assessment. Do not reserve empty space for a future owner image.
 
-## Responsive behavior
+### 4. Treatments in motion
 
-- Mobile is the primary decision surface.
-- Hero stacks copy before media; the first action remains visible without covering content.
-- Treatment index becomes a horizontal snap gallery with one almost-full card and a visible edge of the next item.
-- Desktop two-column sections become one-column narratives, with typography capped to prevent overflow.
-- Video defaults to a fast poster frame and loads motion only when near view; meaningful videos have text alternatives.
-- A compact dark booking bar may appear after the hero on mobile, but it must never cover reading content or the footer.
+The film module is the treatment overview and the home for current and future client footage.
 
-## Copy principles
+- Desktop: one large active film plus a vertical list of treatments.
+- Mobile: one 4:5 active film plus a horizontally scrollable treatment selector.
+- Only the selected video plays.
+- Keep one quiet caption such as `Aus dem Studio · ohne Ton`; do not repeatedly advertise that the footage is real.
+- Current treatment names: Laser-Haarentfernung, AquaFacial, Microneedling, Wimpernlifting and Hautpflege.
+- New client films can replace individual sources without changing the layout.
 
-- Primary line: “Schönheit, die sich nach Ihnen richtet.”
-- Supporting line: “Laser-Haarentfernung und Gesichtsbehandlungen in Q1, Mannheim—persönlich geplant und ruhig durchgeführt.”
-- Primary action: “Termin anfragen”.
-- Price replacement: “Welche Behandlung passt zu mir?” with personal consultation, not hidden price teasing.
-- Avoid “Premium”, “perfekt”, “makellos”, guaranteed outcomes, and repetitive “Mehr erfahren” controls.
+### 5. Personal recommendation
 
-## Proof and content still needed
+Replace price-led browsing with a short consultation prompt. Ask the visitor to share their goal through WhatsApp, then explain that suitability and treatment choice are discussed personally.
 
-- True vector logo master.
-- Owner name, role, short biography, portrait, and explicit permission to publish.
-- NiSV certificate or exact qualification wording and named holder.
-- Six-shot studio photography set.
-- Verified Google review excerpts with consent/source, or no testimonials.
-- Confirmation of the main audience and whether male laser clients should receive dedicated copy.
+### 6. Technology and qualification
 
-## Acceptance criteria for mockups
+- Show the Soprano ICE Platinum machine at a useful scale.
+- Explain controlled warmth and continuous cooling in plain German.
+- Present NiSV as a simple proof line beside the technology copy.
+- Use careful wording: comfort varies and the setting is selected for the person's skin, hair and treatment area.
 
-- Brand kit shows logo treatment, palette, type, controls, image direction, and voice.
-- Desktop and mobile mockups represent the same system and landing-page story.
-- No public prices, fake proof, pills, floating badges, repeated generic card grids, or green full-width CTA.
-- Real client laser footage is visibly planned as proof.
-- The machine, owner placeholder, location, and WhatsApp journey each have a clear place.
-- German text remains legible without overflow at 1440px and 390px widths.
+### 7. Visit process
+
+Use three steps only:
+
+1. Send a short WhatsApp request.
+2. Discuss goals, skin and the appropriate treatment.
+3. Attend the treatment and receive aftercare guidance.
+
+Desktop uses a horizontal progress line. Mobile uses a vertical line so the sequence remains easy to scan.
+
+### 8. Location and final action
+
+- Wine-colored contact panel with address, hours and WhatsApp action.
+- Adjacent Mannheim-Quadrate map treatment or an accessible Google Maps embed in production.
+- Contact information must match the Google Business Profile exactly.
+
+### 9. Footer
+
+Include salon name, treatment links, full contact information, Impressum and Datenschutz. The mobile booking action must not cover the footer.
+
+## Video behavior and performance
+
+- Hero video: muted, looping, `playsInline`, with a lightweight poster visible immediately.
+- Treatment videos: load metadata or poster first and load/play only the selected film.
+- Pause videos when they leave the viewport.
+- Respect `prefers-reduced-motion`; show the poster instead of forced motion.
+- Do not load all full-resolution films on the initial request.
+- Compress client video into browser-friendly MP4/WebM and preserve the original file separately.
+- Every meaningful video needs a useful text label; decorative motion should be ignored by assistive technology.
+
+## Mobile usability contract
+
+Mobile is a primary layout, not a reduced desktop page.
+
+- Supported content widths: 360px and above; verify explicitly at 390px and 430px.
+- No unintentional horizontal page overflow.
+- Minimum interactive target: 44×44px.
+- Page gutters: approximately 20px on common phone widths.
+- Headings must fit without clipped letters or single-character orphan lines.
+- Body copy remains at least 16px and uses comfortable line spacing.
+- Main actions may become full width; secondary links stay visually separate.
+- The treatment selector is the only intentional horizontal scroll region and must reveal the edge of the next item.
+- The 4:5 videos must preserve their frame without stretching.
+- The process becomes a vertical timeline.
+- The technology section stacks copy before the machine image.
+- The location section stacks contact information before the map.
+- The sticky WhatsApp action appears only after the hero, respects the bottom safe area, and hides before it would cover the footer.
+- Menu, buttons and media must remain usable at 200% browser zoom.
+
+## Accessibility
+
+- Maintain WCAG AA contrast for text and controls.
+- Provide visible keyboard focus states.
+- Use semantic headings in order and one H1 only.
+- Give informative images useful alternative text; decorative marks use empty alt text.
+- The treatment selector must work with keyboard controls and expose the active selection.
+- Do not rely on color alone to communicate state.
+
+## SEO foundation
+
+- The landing H1 includes the primary local topic: laser and skincare in Mannheim.
+- Title and description must use natural German and the verified salon name and location.
+- Include LocalBusiness/BeautySalon structured data with matching name, address, phone, URL and opening hours.
+- Link every treatment name to its corresponding service page.
+- Use one crawlable contact/location section and an accessible map link.
+- Keep visual copy concise, then use service pages and the FAQ for deeper search intent.
+
+## Acceptance criteria
+
+- The production landing page matches the approved Rosé Modernism mockup in structure, color and typographic character.
+- No owner placeholder and no public price list appears.
+- Desktop and mobile present the same content hierarchy.
+- The page has no unintended overflow at 360px, 390px, 430px, 768px, 1024px and 1440px.
+- Hero copy remains readable and the H1 does not overflow at any tested width.
+- The mobile booking action is absent in the first viewport, appears after the hero and never covers footer content.
+- Only one treatment video plays at a time.
+- The first viewport has a poster or usable media state before video playback begins.
+- All buttons and treatment selectors meet the minimum touch-target size.
+- Keyboard navigation, reduced motion and 200% zoom remain usable.
+- Lighthouse checks show no critical accessibility or layout-shift failures before deployment.
+
+## Mockup references
+
+- Brand kit: `docs/brand-kit-v2/brand-kit.html`
+- Landing mockup: `docs/brand-kit-v2/landing.html`
+- Desktop capture: `docs/brand-kit-v2/captures/landing-desktop.png`
+- Mobile capture: `docs/brand-kit-v2/captures/landing-mobile.png`
