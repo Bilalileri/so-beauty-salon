@@ -133,12 +133,10 @@ p {
 }
 
 .logo-mark {
-  width: 78px;
-  height: 78px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   mix-blend-mode: multiply;
-  transform: scale(1.3);
-  transform-origin: center;
 }
 
 .site-header .logo-mark,
@@ -459,6 +457,14 @@ p {
   height: 270px;
   overflow: hidden;
   background: #ded6cf;
+}
+
+.lazy-treatment-video {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 25% 18%, rgba(255, 253, 249, 0.5), transparent 34%),
+    linear-gradient(135deg, #efe5df, #d9d0c7);
 }
 
 .treatment-card:nth-child(4) .treatment-media,
@@ -2105,8 +2111,8 @@ p {
   }
 
   .logo-mark {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 82px;
   }
 
   .logo-type strong {
@@ -2347,8 +2353,8 @@ p {
   }
 
   .service-logo .logo-mark {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 82px;
   }
 
   .service-logo strong {
