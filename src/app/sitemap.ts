@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { treatments } from "./treatments";
+import { articles } from "./ratgeber/articles";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://beautyso.de";
 
@@ -18,6 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly" as const,
       priority: treatment.slug === "laser-haarentfernung" ? 0.9 : 0.75,
       images: treatment.slug === "laser-haarentfernung" ? [`${siteUrl}/media/soprano-ice-platinum.png`] : undefined,
+    })),
+    {
+      url: `${siteUrl}/ratgeber`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    ...articles.map((article) => ({
+      url: `${siteUrl}/ratgeber/${article.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
     })),
     {
       url: `${siteUrl}/impressum`,

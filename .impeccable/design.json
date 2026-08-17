@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-16T22:29:30Z",
+  "title": "Design System: S&O Beauty Salon",
+  "extensions": {
+    "colorMeta": {
+      "rose-bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#f5f0ea",
+        "tonalRamp": ["oklch(15% 0.018 70)", "oklch(25% 0.018 70)", "oklch(38% 0.018 70)", "oklch(52% 0.018 70)", "oklch(66% 0.018 70)", "oklch(78% 0.018 70)", "oklch(88% 0.018 70)", "oklch(95% 0.018 70)"]
+      },
+      "rose-paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fffdfa",
+        "tonalRamp": ["oklch(15% 0.008 70)", "oklch(25% 0.008 70)", "oklch(38% 0.008 70)", "oklch(52% 0.008 70)", "oklch(66% 0.008 70)", "oklch(78% 0.008 70)", "oklch(88% 0.008 70)", "oklch(95% 0.008 70)"]
+      },
+      "rose-blush": {
+        "role": "secondary",
+        "displayName": "Blush",
+        "canonical": "#e3c4c0",
+        "tonalRamp": ["oklch(15% 0.035 18)", "oklch(25% 0.035 18)", "oklch(38% 0.035 18)", "oklch(52% 0.035 18)", "oklch(66% 0.035 18)", "oklch(78% 0.035 18)", "oklch(88% 0.035 18)", "oklch(95% 0.035 18)"]
+      },
+      "rose-accent": {
+        "role": "secondary",
+        "displayName": "Rose",
+        "canonical": "#c98f91",
+        "tonalRamp": ["oklch(15% 0.07 15)", "oklch(25% 0.07 15)", "oklch(38% 0.07 15)", "oklch(52% 0.07 15)", "oklch(66% 0.07 15)", "oklch(78% 0.07 15)", "oklch(88% 0.07 15)", "oklch(95% 0.07 15)"]
+      },
+      "rose-wine": {
+        "role": "primary",
+        "displayName": "Wine",
+        "canonical": "#713746",
+        "tonalRamp": ["oklch(15% 0.09 5)", "oklch(25% 0.09 5)", "oklch(38% 0.09 5)", "oklch(52% 0.09 5)", "oklch(66% 0.09 5)", "oklch(78% 0.09 5)", "oklch(88% 0.09 5)", "oklch(95% 0.09 5)"]
+      },
+      "rose-wine-dark": {
+        "role": "primary",
+        "displayName": "Wine Dark",
+        "canonical": "#4b222e",
+        "tonalRamp": ["oklch(15% 0.075 5)", "oklch(25% 0.075 5)", "oklch(38% 0.075 5)", "oklch(52% 0.075 5)", "oklch(66% 0.075 5)", "oklch(78% 0.075 5)", "oklch(88% 0.075 5)", "oklch(95% 0.075 5)"]
+      },
+      "rose-ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#21191c",
+        "tonalRamp": ["oklch(15% 0.02 345)", "oklch(25% 0.02 345)", "oklch(38% 0.02 345)", "oklch(52% 0.02 345)", "oklch(66% 0.02 345)", "oklch(78% 0.02 345)", "oklch(88% 0.02 345)", "oklch(95% 0.02 345)"]
+      },
+      "rose-muted": {
+        "role": "neutral",
+        "displayName": "Muted Body",
+        "canonical": "#766b6d",
+        "tonalRamp": ["oklch(15% 0.018 350)", "oklch(25% 0.018 350)", "oklch(38% 0.018 350)", "oklch(52% 0.018 350)", "oklch(66% 0.018 350)", "oklch(78% 0.018 350)", "oklch(88% 0.018 350)", "oklch(95% 0.018 350)"]
+      },
+      "rose-line": {
+        "role": "neutral",
+        "displayName": "Ink Rule",
+        "canonical": "rgba(33, 25, 28, 0.18)",
+        "tonalRamp": ["oklch(15% 0.02 345 / 0.18)", "oklch(25% 0.02 345 / 0.18)", "oklch(38% 0.02 345 / 0.18)", "oklch(52% 0.02 345 / 0.18)", "oklch(66% 0.02 345 / 0.18)", "oklch(78% 0.02 345 / 0.18)", "oklch(88% 0.02 345 / 0.18)", "oklch(95% 0.02 345 / 0.18)"]
+      },
+      "rose-light-line": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "canonical": "rgba(255, 253, 250, 0.25)",
+        "tonalRamp": ["oklch(15% 0.008 70 / 0.25)", "oklch(25% 0.008 70 / 0.25)", "oklch(38% 0.008 70 / 0.25)", "oklch(52% 0.008 70 / 0.25)", "oklch(66% 0.008 70 / 0.25)", "oklch(78% 0.008 70 / 0.25)", "oklch(88% 0.008 70 / 0.25)", "oklch(95% 0.008 70 / 0.25)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Landing H1 and first-view statement." },
+      "headline": { "displayName": "Headline", "purpose": "Major section statements." },
+      "title": { "displayName": "Title", "purpose": "Journey and treatment titles." },
+      "body": { "displayName": "Body", "purpose": "Reading copy and practical information." },
+      "label": { "displayName": "Label", "purpose": "Short factual metadata, states and numbered steps." }
+    },
+    "motion": [
+      { "name": "state-fast", "value": "160ms ease", "purpose": "Button, tab and mobile-menu state transitions." },
+      { "name": "state-medium", "value": "180ms ease", "purpose": "Persistent mobile booking visibility transition." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "980px" },
+      { "name": "service-compact", "value": "960px" },
+      { "name": "mobile", "value": "820px" },
+      { "name": "service-and-guide-mobile", "value": "760px" },
+      { "name": "service-and-guide-small-mobile", "value": "520px" },
+      { "name": "small-mobile", "value": "380px" }
+    ],
+    "mediaFraming": {
+      "aspectRatio": "4 / 5",
+      "objectFit": "cover",
+      "desktopVariable": "--film-position",
+      "mobileVariable": "--film-position-mobile",
+      "landingMobileBreakpoint": "820px",
+      "serviceMobileBreakpoint": "760px",
+      "fallback": "var(--film-position-mobile, var(--film-position, 50% 50%))",
+      "mobileRule": "Keep the 4:5 cover frame and move the focal point; never stretch or switch to contain.",
+      "captionPolicy": "Name client-supplied footage directly. Describe licensed stock as the visible supporting treatment step without implying studio provenance.",
+      "films": [
+        {
+          "name": "Laser-Haarentfernung",
+          "source": "/media/services/client-laser-leg.mp4",
+          "poster": "/media/services/client-laser-leg-poster.jpg",
+          "provenance": "Client-supplied WhatsApp video received 6 August 2026.",
+          "desktopObjectPosition": "48% 52%",
+          "mobileObjectPosition": "52% 50%"
+        },
+        {
+          "name": "AquaFacial",
+          "source": "/media/services/aquafacial-cleaning.mp4",
+          "provenance": "Licensed Mixkit supporting film, item 52145.",
+          "supportingStepLabel": "Einblick in einen Reinigungsschritt",
+          "desktopObjectPosition": "50% 48%",
+          "mobileObjectPosition": "50% 46%"
+        },
+        {
+          "name": "Microneedling",
+          "source": "/media/services/microneedling.m4v",
+          "provenance": "Retained supporting clip; do not replace with procedurally inaccurate footage.",
+          "desktopObjectPosition": "54% 50%",
+          "mobileObjectPosition": "58% 50%"
+        },
+        {
+          "name": "Wimpernlifting",
+          "source": "/media/services/wimpern-elegant.m4v",
+          "provenance": "Retained supporting clip; do not substitute eyelash-extension footage.",
+          "desktopObjectPosition": "52% 46%",
+          "mobileObjectPosition": "56% 48%"
+        },
+        {
+          "name": "Professionelle Hautpflege",
+          "source": "/media/services/hautpflege-clinic.mp4",
+          "provenance": "Licensed Mixkit supporting film, item 52155.",
+          "supportingStepLabel": "Einblick in apparative Hautpflege",
+          "desktopObjectPosition": "57% 48%",
+          "mobileObjectPosition": "78% 48%"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Primary action on light and blush fields.",
+      "html": "<a class=\"ds-btn-ink\" href=\"#\"><span>Termin über WhatsApp</span><svg aria-hidden=\"true\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 16\" width=\"16\"><path d=\"M4 12 12 4M5 4h7v7\" stroke=\"currentColor\" stroke-linecap=\"square\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-btn-ink { align-items: center; background: var(--rose-ink); border: 1px solid var(--rose-ink); border-radius: 2px; color: var(--rose-paper); display: inline-flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.82rem; font-weight: 650; gap: 28px; justify-content: space-between; min-height: 52px; padding: 0 22px; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; } .ds-btn-ink:hover { background: var(--rose-paper); border-color: var(--rose-paper); color: var(--rose-ink); } .ds-btn-ink:focus-visible { background: var(--rose-paper); border-color: var(--rose-paper); color: var(--rose-ink); outline: 3px solid var(--rose-wine); outline-offset: 4px; }"
+    },
+    {
+      "name": "Paper Button",
+      "kind": "button",
+      "refersTo": "button-paper",
+      "description": "Light action used inside the Wine Dark mobile menu.",
+      "html": "<a class=\"ds-btn-paper\" href=\"#\"><span>Termin über WhatsApp</span><svg aria-hidden=\"true\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 16\" width=\"16\"><path d=\"M4 12 12 4M5 4h7v7\" stroke=\"currentColor\" stroke-linecap=\"square\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-btn-paper { align-items: center; background: var(--rose-paper); border: 1px solid var(--rose-paper); border-radius: 2px; color: var(--rose-wine-dark); display: inline-flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.82rem; font-weight: 650; gap: 28px; justify-content: space-between; min-height: 52px; padding: 0 22px; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; } .ds-btn-paper:hover { background: var(--rose-blush); border-color: var(--rose-blush); color: var(--rose-ink); } .ds-btn-paper:focus-visible { background: var(--rose-blush); border-color: var(--rose-blush); color: var(--rose-ink); outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    },
+    {
+      "name": "Wine Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Outlined action for wine-colored fields and header chrome.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\"><span>Termin anfragen</span><svg aria-hidden=\"true\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 16\" width=\"16\"><path d=\"M4 12 12 4M5 4h7v7\" stroke=\"currentColor\" stroke-linecap=\"square\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-btn-outline { align-items: center; background: transparent; border: 1px solid rgba(255, 253, 250, 0.58); border-radius: 2px; color: var(--rose-paper); display: inline-flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.82rem; font-weight: 650; gap: 28px; justify-content: space-between; min-height: 52px; padding: 0 22px; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; } .ds-btn-outline:hover { background: var(--rose-paper); border-color: var(--rose-paper); color: var(--rose-ink); } .ds-btn-outline:focus-visible { background: var(--rose-paper); border-color: var(--rose-paper); color: var(--rose-ink); outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    },
+    {
+      "name": "Rule Text Link",
+      "kind": "custom",
+      "description": "Compact secondary action underlined by a current-color rule.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Behandlungen ansehen</a>",
+      "css": ".ds-text-link { align-items: center; border-bottom: 1px solid currentColor; color: var(--rose-ink); display: inline-flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.8rem; font-weight: 650; min-height: 44px; text-decoration: none; } .ds-text-link:hover { color: var(--rose-wine); } .ds-text-link:focus-visible { outline: 3px solid var(--rose-wine); outline-offset: 4px; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "description": "Quiet center navigation for the Wine Dark desktop header.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Hauptnavigation\"><a href=\"#\">Behandlungen</a><a href=\"#\">Technologie</a><a href=\"#\">Ablauf</a><a href=\"#\">Ratgeber</a><a href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-nav { align-items: center; background: var(--rose-wine-dark); color: var(--rose-paper); display: flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.9rem; gap: 28px; padding: 18px 24px; } .ds-nav a { align-items: center; color: inherit; display: inline-flex; min-height: 44px; opacity: 0.82; text-decoration: none; } .ds-nav a:hover { opacity: 1; } .ds-nav a:focus-visible { opacity: 1; outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    },
+    {
+      "name": "Treatment Film Tab",
+      "kind": "chip",
+      "description": "Rule-separated treatment choice with textual active state.",
+      "html": "<button class=\"ds-film-tab\" data-active=\"true\" type=\"button\"><span>01</span><strong>Laser-Haarentfernung</strong><span>Aktiv</span></button>",
+      "css": ".ds-film-tab { align-items: center; background: transparent; border: 0; border-bottom: 1px solid var(--rose-light-line); color: var(--rose-paper); cursor: pointer; display: grid; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; gap: 20px; grid-template-columns: 36px 1fr auto; min-height: 72px; padding: 14px 0; text-align: left; width: 100%; } .ds-film-tab > span:first-child { color: var(--rose-accent); font-size: 0.66rem; letter-spacing: 0.12em; } .ds-film-tab strong { font-size: clamp(1.28rem, 2.1vw, 2rem); font-weight: 470; letter-spacing: -0.025em; } .ds-film-tab > span:last-child { font-size: 0.62rem; letter-spacing: 0.1em; opacity: 0.56; text-transform: uppercase; } .ds-film-tab[data-active='true'] { color: var(--rose-blush); } .ds-film-tab[data-active='true'] > span:last-child { opacity: 1; } .ds-film-tab:hover { color: var(--rose-blush); } .ds-film-tab:focus-visible { outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    },
+    {
+      "name": "Video Control",
+      "kind": "button",
+      "description": "Explicit playback control over cinematic 4:5 cover-cropped treatment films.",
+      "html": "<button class=\"ds-video-toggle\" type=\"button\">Film abspielen</button>",
+      "css": ".ds-video-toggle { align-items: center; background: rgba(33, 25, 28, 0.76); border: 1px solid rgba(255, 253, 250, 0.55); color: var(--rose-paper); cursor: pointer; display: inline-flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.7rem; font-weight: 650; justify-content: center; min-height: 44px; min-width: 76px; padding: 0 12px; } .ds-video-toggle:hover { background: var(--rose-ink); } .ds-video-toggle:focus-visible { outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    },
+    {
+      "name": "Journey Step",
+      "kind": "custom",
+      "description": "Numbered process step anchored to the Wine journey rule.",
+      "html": "<div class=\"ds-journey-step\"><span class=\"ds-journey-dot\" aria-hidden=\"true\"></span><span class=\"ds-journey-meta\">01 · Anfragen</span><strong>Kurze Nachricht senden.</strong><p>Nennen Sie Ihre Wunschbehandlung und mögliche Termine.</p></div>",
+      "css": ".ds-journey-step { border-top: 1px solid var(--rose-wine); color: var(--rose-ink); font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; padding-top: 32px; position: relative; } .ds-journey-dot { background: var(--rose-wine); border: 2px solid var(--rose-wine); border-radius: 50%; box-shadow: 0 0 0 7px var(--rose-blush); display: block; height: 20px; left: 0; position: absolute; top: -10px; width: 20px; } .ds-journey-meta { color: var(--rose-wine); display: block; font-size: 0.68rem; font-weight: 650; letter-spacing: 0.12em; margin-bottom: 22px; text-transform: uppercase; } .ds-journey-step strong { display: block; font-size: 1.65rem; font-weight: 500; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 12px; } .ds-journey-step p { color: var(--rose-muted); font-size: 1rem; line-height: 1.58; margin: 0; max-width: 300px; }"
+    },
+    {
+      "name": "Mobile Booking Action",
+      "kind": "button",
+      "description": "Context-aware fixed WhatsApp action shown between hero and footer on mobile.",
+      "html": "<a class=\"ds-mobile-booking\" href=\"#\"><span>Termin über WhatsApp</span><svg aria-hidden=\"true\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 16\" width=\"16\"><path d=\"M4 12 12 4M5 4h7v7\" stroke=\"currentColor\" stroke-linecap=\"square\" stroke-width=\"1.5\"/></svg></a>",
+      "css": ".ds-mobile-booking { align-items: center; background: var(--rose-wine-dark); border: 1px solid rgba(255, 255, 255, 0.25); color: var(--rose-paper); display: flex; font-family: var(--font-so-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 0.8rem; font-weight: 650; justify-content: space-between; max-width: calc(100% - 28px); min-height: 56px; padding: 0 20px; text-decoration: none; transition: opacity 180ms ease, transform 180ms ease; width: 310px; } .ds-mobile-booking:hover { background: var(--rose-wine); } .ds-mobile-booking:focus-visible { outline: 3px solid var(--rose-paper); outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Rosé Modernism",
+    "overview": "Rosé Modernism presents personal beauty guidance as calm, qualified and contemporary. Bone, blush and wine color fields carry the identity while a modernist grid, generous whitespace and thin rules give the page structure. The result is premium through care and proportion, not luxury-template theatricality.\n\nThe system is restrained and copy-led. One neutral grotesk family handles every role; treatment media appears in cinematic 4:5 cover crops with deliberate focal positioning; controls stay rectangular and direct. Client-supplied footage is distinguished from honestly labeled licensed supporting footage. The system rejects oversized serif display type, decorative gradients, rounded card grids, floating badges, fabricated proof and imagery, and a green WhatsApp treatment that would break the world.",
+    "keyCharacteristics": [
+      "Warm bone, blush, rose and wine fields with ink-led contrast.",
+      "Flat surfaces separated by tone, whitespace and 1px rules.",
+      "One grotesk family with large, tightly tracked display scales.",
+      "Near-square controls and 4:5 cinematic media crops tuned per breakpoint.",
+      "Personal conversion through clear WhatsApp actions without pressure."
+    ],
+    "rules": [
+      { "name": "The Tonal Field Rule", "body": "Build contrast with solid bone, blush, rose and wine fields plus fine rules; gradients and shadowed card stacks are outside this system.", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "Use Schibsted Grotesk throughout; hierarchy comes from proportion, weight, tracking and space, never from adding a fashionable serif or decorative display font.", "section": "typography" },
+      { "name": "The Natural Compound Rule", "body": "Keep mobile service and guide display text at `-0.04em` or looser, with hyphenation disabled and normal wrapping; never force a German compound into an orphaned fragment.", "section": "typography" },
+      { "name": "The Flat-by-Tone Rule", "body": "Separate hierarchy with color fields, rules and spacing; do not lift ordinary surfaces with drop shadows.", "section": "elevation" },
+      { "name": "The Focal Crop Rule", "body": "Keep every treatment film in its 4:5 cover frame and move the crop with per-breakpoint focal variables; never stretch the footage or switch mobile to `contain`.", "section": "components" },
+      { "name": "The Media Truth Rule", "body": "Name client-supplied footage directly; label licensed stock as a supporting treatment step and never imply false studio provenance or an inaccurately represented procedure.", "section": "components" }
+    ],
+    "dos": [
+      "Do use solid Bone, Paper, Blush, Rose and Wine fields to establish hierarchy.",
+      "Do keep display tracking at or above the implemented `-0.04em` floor and preserve natural German wrapping.",
+      "Do use 4:5 `object-fit: cover` film frames with treatment-specific desktop and mobile focal positions.",
+      "Do keep the client-supplied laser clip as the direct salon evidence and label licensed stock by the supporting step it visibly shows.",
+      "Do preserve copy-first service pages and full-row editorial Ratgeber links as the extension pattern for deeper content.",
+      "Do use visible 3px focus outlines, 44px minimum interaction targets and authored SVG arrows.",
+      "Do keep WhatsApp actions personal, rectangular and context-aware on mobile."
+    ],
+    "donts": [
+      "Don't introduce gradients, rounded card grids, pills, capsules or shadow-led elevation.",
+      "Don't introduce oversized serif display type or turn short factual labels into repeated decorative kickers.",
+      "Don't use floating circular badges, a full-width green WhatsApp bar or multiple autoplaying videos.",
+      "Don't stretch film, switch mobile crops to `contain`, or reuse one focal point when the subject needs a breakpoint-specific adjustment.",
+      "Don't present licensed supporting footage as client-supplied studio material or as a different procedure.",
+      "Don't fabricate owner imagery, testimonials, proof, treatment outcomes or beauty imagery.",
+      "Don't use text glyphs where the implemented system uses authored SVG icons."
+    ]
+  }
+}

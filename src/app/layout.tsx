@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Newsreader } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
+import "./landing.css";
+import "./service.css";
+import "./ratgeber/ratgeber.css";
 
-const instrumentSans = Instrument_Sans({
+const schibstedGrotesk = Schibsted_Grotesk({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-so-sans",
   display: "swap",
-});
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  display: "swap",
-  weight: ["400", "500", "600"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://beautyso.de";
 const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
+const directionContract = `<!--
+THESIS: Personal beauty guidance in Mannheim, presented as a calm modernist salon rather than a luxury-template catalogue.
+OWN-WORLD: Bone, blush and wine fields; flat rule-line structure; neutral grotesk type; restrained rectangular controls.
+STORY: Understand the treatments, see one real treatment film, trust the qualified process, then ask personally on WhatsApp.
+FIRST VIEWPORT: Wine header above a blush, copy-led hero; consultation copy and actions left, contained 4:5 film right; mobile stacks copy before film.
+FORM: Rosé Modernism, grounded candidate 1 and user-pinned choice; Impeccable direction seed 5bd160d6 corroborates the completed decision round.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -62,8 +66,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`${instrumentSans.variable} ${newsreader.variable}`}>
-      <body>{children}</body>
+    <html lang="de" className={schibstedGrotesk.variable}>
+      <body>
+        <template data-impeccable-contract dangerouslySetInnerHTML={{ __html: directionContract }} />
+        {children}
+      </body>
     </html>
   );
 }
